@@ -135,6 +135,7 @@ class Game:
         while not (all([x.check_sum() for x in self.rows])):
             self.eliminate_possibilities()
             self.update_game()
+        return [x.value for x in self.entries]
 
 
 class Group:
