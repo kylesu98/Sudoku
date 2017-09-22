@@ -53,10 +53,10 @@ class Game:
                 game += '\n'
         print(game)
 
-    '''Eliminates possible values based on row, column, and box'''
 
     def eliminate_possibilities(self):
-        if (self.test_mode):
+        '''Eliminates possible values based on row, column, and box'''
+         if (self.test_mode):
             for i in self.rows:
                 i.test_elim_poss()
             for i in self.cols:
@@ -71,9 +71,9 @@ class Game:
             for i in self.boxes:
                 i.elim_poss()
 
-    '''Updates possible values for each square, finds the square with least number of possible values to test'''
 
     def update_game(self):
+        '''Updates possible values for each square, finds the square with least number of possible values to test'''
         counter = 0
         min_length = 100
         for i in self.rows:
@@ -105,10 +105,9 @@ class Game:
 
         return False
 
-    '''Looks for solution via depth first search'''
 
     def test_solve(self, box):
-        'Makes copy of Game'
+        '''Looks for solution via depth first search'''
         moves = [x for x in box.test_values]
         current_values = [x.value for x in self.game]
         other_values = [[y for y in x.test_values] for x in self.game]
@@ -128,7 +127,6 @@ class Game:
                 x.test_values = [y for y in other_values[index]]
                 x.value = current_values[index]
                 index += 1
-        'If the puzzle has been incorrect up to now, resets itself'
         box.try_value(0)
 
     def solve(self):
@@ -210,41 +208,3 @@ class Value:
             return '_'
         else:
             return str(self.value)
-
-
-test = Game([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-             1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-             1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-test_2 = Game([0, 0, 2, 0, 0, 5, 0, 0, 4, 6, 1, 0, 4, 0, 0, 0, 7, 8, 9, 0, 8, 7, 0, 0, 0, 1, 0, 0, 0, 6, 5, 0, 8, 4, 0,
-               0, 0, 5, 0, 1, 0, 7, 0, 8, 0, 0, 0, 3, 2, 0, 6, 7, 0, 0, 0, 6, 0, 0, 0, 2, 1,
-               0, 5, 5, 2, 0, 0, 0, 4, 0, 3, 9, 4, 0, 0, 3, 0, 0, 2, 0, 0])
-test_3 = Game(
-    [0, 0, 6, 0, 2, 0, 7, 0, 1, 0, 0, 0, 9, 0, 0, 0, 3, 8, 0, 0, 1, 3, 0, 0, 4, 0, 0, 0, 0, 9, 6, 0, 0, 0, 8, 0, 3, 0,
-     0, 0, 0,
-     0, 0, 0, 4, 0, 1, 0, 0, 0, 3, 9, 0, 0, 0, 0, 8, 0, 0, 5, 2, 0, 0, 6, 9, 0, 0, 0, 7, 0, 0, 0, 4, 0, 5, 0, 3, 0, 8,
-     0, 0])
-test_4 = Game(
-    [0, 7, 0, 0, 0, 6, 5, 9, 0, 4, 2, 0, 9, 8, 1, 3, 7, 0, 6, 0, 0, 0, 0, 0, 0, 0, 8, 9, 4, 0, 6, 0, 5, 0, 0, 0, 8, 0,
-     7, 0, 4, 0, 6, 0, 9, 0, 0, 0,
-     8, 0, 7, 0, 4, 2, 7, 0, 0, 0, 0, 0, 0, 0, 5, 0, 9, 6, 5, 7, 8, 0, 2, 1, 0, 5, 4, 1, 0, 0, 0, 6, 0])
-test_5 = Game(
-    [1, 0, 0, 0, 2, 0, 4, 7, 8, 6, 8, 0, 1, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 9, 0, 0, 3, 0, 0, 0, 0, 0, 2, 0, 8, 1, 0, 6,
-     0, 0, 0, 0, 0, 5, 0, 9, 3, 0, 4, 0, 0, 0, 0, 0, 8, 0, 0, 6, 0, 0, 0, 0, 0,
-     3, 0, 0, 0, 0, 8, 0, 4, 7, 5, 2, 4, 0, 7, 0, 0, 0, 9])
-test_0 = Game(
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-test_hard = Game(
-    [0, 0, 3, 0, 0, 5, 0, 9, 8, 7, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 3, 4, 0, 0,
-     0, 4, 0, 7, 0, 0, 0, 8, 4, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 9, 1, 0, 0, 0,
-     3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0, 8, 0, 0, 7, 0, 0])
-test_hard2 = Game(
-    [0, 0, 0, 0, 1, 0, 0, 5, 0, 0, 1, 0, 2, 5, 0, 8, 0, 0, 0, 0, 6, 0, 0, 8, 0, 0, 3, 0, 0, 0, 0, 0, 5, 0, 8, 9, 0, 0,
-     7, 0, 0, 0, 2, 0, 0, 8, 5, 0, 1, 0, 0, 0, 0, 0, 3, 0, 0, 7, 0, 0,
-     5, 0, 0, 0, 0, 5, 0, 8, 6, 0, 7, 0, 0, 7, 0, 0, 2, 0, 0, 0, 0])
-# testprint_game()
-test_hard.print_game()
-test_hard.solve()
-test_hard.print_game()
-test_hard.print_game()
