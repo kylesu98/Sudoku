@@ -56,7 +56,7 @@ class Game:
 
     def eliminate_possibilities(self):
         '''Eliminates possible values based on row, column, and box'''
-         if (self.test_mode):
+        if (self.test_mode):
             for i in self.rows:
                 i.test_elim_poss()
             for i in self.cols:
@@ -133,7 +133,7 @@ class Game:
         while not (all([x.check_sum() for x in self.rows])):
             self.eliminate_possibilities()
             self.update_game()
-        return [x.value for x in self.entries]
+        return [x.value for x in self.game]
 
 
 class Group:
