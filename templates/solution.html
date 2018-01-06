@@ -1,0 +1,102 @@
+<html lang="en">
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+    </head>
+    <body>
+        <h1> Sudoku Solver</h1>
+      	<style>
+		table { background-color: white; border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 25}
+		colgroup, tbody { border: solid medium; }
+		td { border: solid thin; height: 1.5em; width: 1.5em; text-align: center; padding: 0;}
+			</style>
+	<table align= "center">
+  		<caption>Solution!</caption>
+  		<colgroup><col><col><col>
+  		<colgroup><col><col><col>
+  		<colgroup><col><col><col>
+  		<tbody>
+   			<tr> <td>{{solution[0]}} 
+   				 <td>{{solution[1]}}
+   				 <td>{{solution[2]}} 
+   				 <td>{{solution[3]}} 
+   				 <td>{{solution[4]}}
+   				 <td>{{solution[5]}}
+   				 <td>{{solution[6]}} 
+   				 <td>{{solution[7]}}
+   				 <td>{{solution[8]}}
+   			<tr> <td>{{solution[9]}} 
+           <td>{{solution[10]}}
+           <td>{{solution[11]}} 
+           <td>{{solution[12]}} 
+           <td>{{solution[13]}}
+           <td>{{solution[14]}}
+           <td>{{solution[15]}} 
+           <td>{{solution[16]}}
+           <td>{{solution[17]}}
+   			<tr> <td>{{solution[18]}} 
+           <td>{{solution[19]}}
+           <td>{{solution[20]}} 
+           <td>{{solution[21]}} 
+           <td>{{solution[22]}}
+           <td>{{solution[23]}}
+           <td>{{solution[24]}} 
+           <td>{{solution[25]}}
+           <td>{{solution[26]}}
+  		<tbody>
+        <tr> <td>{{solution[27]}} 
+           <td>{{solution[28]}}
+           <td>{{solution[29]}} 
+           <td>{{solution[30]}} 
+           <td>{{solution[31]}}
+           <td>{{solution[32]}}
+           <td>{{solution[33]}} 
+           <td>{{solution[34]}}
+           <td>{{solution[35]}}
+        <tr> <td>{{solution[36]}} 
+           <td>{{solution[37]}}
+           <td>{{solution[38]}} 
+           <td>{{solution[39]}} 
+           <td>{{solution[40]}}
+           <td>{{solution[41]}}
+           <td>{{solution[42]}} 
+           <td>{{solution[43]}}
+           <td>{{solution[44]}}
+        <tr> <td>{{solution[45]}} 
+           <td>{{solution[46]}}
+           <td>{{solution[47]}} 
+           <td>{{solution[48]}} 
+           <td>{{solution[49]}}
+           <td>{{solution[50]}}
+           <td>{{solution[51]}} 
+           <td>{{solution[52]}}
+           <td>{{solution[53]}}
+      <tbody>
+        <tr> <td>{{solution[54]}} 
+           <td>{{solution[55]}}
+           <td>{{solution[56]}} 
+           <td>{{solution[57]}} 
+           <td>{{solution[58]}}
+           <td>{{solution[59]}}
+           <td>{{solution[60]}} 
+           <td>{{solution[61]}}
+           <td>{{solution[62]}}
+        <tr> <td>{{solution[63]}} 
+           <td>{{solution[64]}}
+           <td>{{solution[65]}} 
+           <td>{{solution[66]}} 
+           <td>{{solution[67]}}
+           <td>{{solution[68]}}
+           <td>{{solution[69]}} 
+           <td>{{solution[70]}}
+           <td>{{solution[71]}}
+        <tr> <td>{{solution[72]}} 
+           <td>{{solution[73]}}
+           <td>{{solution[74]}} 
+           <td>{{solution[75]}} 
+           <td>{{solution[76]}}
+           <td>{{solution[77]}}
+           <td>{{solution[78]}} 
+           <td>{{solution[79]}}
+           <td>{{solution[80]}}
+    </body>
+</html>

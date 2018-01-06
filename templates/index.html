@@ -4,7 +4,6 @@
     </head>
     <body>
         <h1> Sudoku Solver</h1>
-        <img id="profile-pic" src="http://www.calhacks.io/assets/img/sittingbear.png"></img>
       	<style>
 		table { background-color: white; border-collapse: collapse; font-family: Calibri, sans-serif; font-size: 25}
 		colgroup, tbody { border: solid medium; }
@@ -15,95 +14,93 @@
   		<colgroup><col><col><col>
   		<colgroup><col><col><col>
   		<colgroup><col><col><col>
+      <form action="." method="POST">
   		<tbody>
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "1" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "2" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "3" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "4" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "5" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "6" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "7" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "8" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "9" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "10" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "11" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "12" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "13" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "14" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "15" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "16" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "17" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "18" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "19" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "20" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "21" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "22" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "23" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "24" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "25" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "26" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "27" style = "width: 24px;">
   		<tbody>
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "28" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "29" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "30" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "31" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "32" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "33" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "34" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "35" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "36" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "37" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "38" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "39" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "40" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "41" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "42" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "43" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "44" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "45" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "46" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "47" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "48" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "49" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "50" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "51" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "52" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "53" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "54" style = "width: 24px;">
   		<tbody>
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   			<tr> <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;"> 
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
-   				 <td> <input type="text" maxlength="1" class="mytext" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "55" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "56" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "57" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "58" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "59" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "60" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "61" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "62" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "63" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "64" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "65" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "66" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "67" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "68" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "69" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "70" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "71" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "72" style = "width: 24px;">
+   			<tr> <td> <input type="text" maxlength="1" class="mytext" name = "73" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "74" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "75" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "76" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "77" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "78" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "79" style = "width: 24px;"> 
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "80" style = "width: 24px;">
+   				 <td> <input type="text" maxlength="1" class="mytext" name = "81" style = "width: 24px;">
 	</table>
-  <form action="." method="POST">
-        <input type="text" name="text">
-        <input type="submit" name="my-form" value="Send">
+        <button class = "button" id = 'solver' type="submit" name="my-form" value="Solve!">Solve!</button>
         </form>
-    <button class="button" id = 'solver'>Solve!</button>
     </body>
 </html>
